@@ -8,9 +8,13 @@ class AppBar extends Component {
   render = () => {
     return (
       <StyledAppBar>
-        <Logo src={GH_LOGO} />
+        <p>React Masonry - resize me!</p>
+        <a href="https://github.com/ryasan86/masonry">
+          <Logo src={GH_LOGO} />
+        </a>
       </StyledAppBar>
     );
   };
 }
+
 export default AppBar;

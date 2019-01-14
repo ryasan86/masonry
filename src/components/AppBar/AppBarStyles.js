@@ -6,7 +6,7 @@ const StyledAppBar = styled.div`
   border: ${({ theme }) => theme.lightBorder};
   padding: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
 `;
 
