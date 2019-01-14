@@ -15,29 +15,12 @@ const StyledMain = styled.div`
 `;
 
 class Main extends Component {
-  state = {
-    loading: false
-  };
-
-  componentDidMount = () => {
-    this.toggleLoading();
-    sleep(750).then(this.toggleLoading); // simulate delay
-  };
-
-  toggleLoading = () => {
-    this.setState({ loading: !this.state.loading });
-  };
-
   renderPosts = () => {
     return posts.map((post, i) => <Card key={i} post={post} />);
   };
 
   render = () => {
-    return (
-      <StyledMain>
-        {this.state.loading ? 'LOADING...' : this.renderPosts()}
-      </StyledMain>
-    );
+    return <StyledMain>{this.renderPosts()}</StyledMain>;
   };
 }
 

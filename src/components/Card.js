@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import imagesLoaded from 'imagesloaded';
 import { ROW_HEIGHT, ROW_GAP } from './../constants';
 
 const StyledCard = styled.div`
@@ -25,11 +26,11 @@ class Card extends Component {
 
   resizeGridCard = () => {
     const content = this.refs[`content${this.props.post.id}`];
-    if (content) {
+    imagesLoaded(content, () => {
       const contentHeight = content.getBoundingClientRect().height;
-      const rowSpan       = Math.ceil((contentHeight + ROW_GAP) / (ROW_HEIGHT + ROW_GAP));
+      const rowSpan = Math.ceil((contentHeight + ROW_GAP) / (ROW_HEIGHT + ROW_GAP));
       this.setState({ span: rowSpan });
-    }
+    });
   };
 
   render = () => {
