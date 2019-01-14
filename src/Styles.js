@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../common';
+import { Button } from './components/common';
 
 const StyledAppBar = styled.div`
   width: 100%;
@@ -19,4 +19,15 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export { StyledAppBar, StyledButton };
+const StyledCard = styled.div`
+  grid-row-end: span ${({ span }) => span};
+`;
+
+const StyledContent = styled.div``;
+
+const StyledImg = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
+
+export { StyledAppBar, StyledButton, StyledCard, StyledContent, StyledImg };

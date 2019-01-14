@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import posts from './../../data.json';
+import posts from './../data.json';
 // import { resizeAllGridItems } from './utils';
-import Card from './StyledCard';
+import Card from './Card';
 
 const rowHeight = 40;
 const rowGap = 10;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { GH_LOGO } from './../../images';
+import { GH_LOGO } from '../images';
 // components
-import { Logo } from '../common';
-import { StyledAppBar } from './AppBarStyles';
+import { Logo } from './common';
+import { StyledAppBar } from './../Styles';
 
 class AppBar extends Component {
   render = () => {
