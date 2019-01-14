@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import AppBar from './components/AppBar/AppBar';
+import Main from './components/Main/Main';
 
 class App extends Component {
   render() {
     return (
-      <div>
-      Hello World
-      </div>
+      <Fragment>
+        <AppBar />
+        <Main />
+      </Fragment>
     );
   }
 }
