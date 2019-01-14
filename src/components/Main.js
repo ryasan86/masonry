@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import posts from './../data.json';
-// import { resizeAllGridItems } from './utils';
+import { ROW_HEIGHT, ROW_GAP, sleep } from "./../constants";
+// components
 import Card from './Card';
 
-const rowHeight = 40;
-const rowGap = 10;
 
 const StyledMain = styled.div`
   padding: 2% 4% 2% 4%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: ${rowGap}px;
-  grid-auto-rows: ${rowHeight}px;
+  grid-gap: ${ROW_GAP}px;
+  grid-auto-rows: ${ROW_HEIGHT}px;
 `;
-
-const sleep = (ms = 0) => new Promise(r => setTimeout(r, ms));
 
 class Main extends Component {
   state = {

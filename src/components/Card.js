@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-const rowHeight = 40;
-const rowGap = 10;
-
-const StyledCard = styled.div`
-  grid-row-end: span ${({ span }) => span};
-`;
-
-const StyledContent = styled.div``;
-
-const StyledImg = styled.img`
-  width: 100%;
-  border-radius: 10px;
-`;
+import { ROW_HEIGHT, ROW_GAP } from "./../constants";
+import { StyledCard, StyledContent, StyledImg } from "./../Styles";
 
 class Card extends Component {
   state = {
@@ -29,7 +16,7 @@ class Card extends Component {
     const content = this.refs[`content${this.props.post.id}`];
     if (content) {
       const contentHeight = content.getBoundingClientRect().height;
-      const rowSpan       = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+      const rowSpan       = Math.ceil((contentHeight + ROW_GAP) / (ROW_HEIGHT + ROW_GAP));
       this.setState({ span: rowSpan });
     }
   };
