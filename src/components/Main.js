@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import posts from './../data.json';
-import { ROW_HEIGHT, ROW_GAP, sleep } from "./../constants";
+import { sleep } from './../constants';
+import { ROW_GAP, ROW_HEIGHT } from './../constants';
 // components
 import Card from './Card';
-
 
 const StyledMain = styled.div`
   padding: 2% 4% 2% 4%;

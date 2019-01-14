@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
-import { ROW_HEIGHT, ROW_GAP } from "./../constants";
-import { StyledCard, StyledContent, StyledImg } from "./../Styles";
+import styled from 'styled-components';
+import { ROW_HEIGHT, ROW_GAP } from './../constants';
+
+const StyledCard = styled.div`
+  grid-row-end: span ${({ span }) => span};
+`;
+
+const StyledContent = styled.div``;
+
+const StyledImg = styled.img`
+  width: 100%;
+  border-radius: 10px;
+`;
 
 class Card extends Component {
   state = {
@@ -22,12 +33,14 @@ class Card extends Component {
   };
 
   render = () => {
-    const { post: { id, imgUrl } } = this.props;
+    const {
+      post: { id, imgUrl }
+    } = this.props;
 
     return (
       <StyledCard span={this.state.span}>
-        <StyledContent ref={`content${id}`} className="content">
-          <StyledImg src={imgUrl} alt={id} name={id} />
+        <StyledContent ref={`content${id}`}>
+          <StyledImg src={imgUrl} alt={id} />
           <div>
             <p>Lorem ipsum dolor sit amet</p>
           </div>
