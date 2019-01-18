@@ -9,8 +9,8 @@ const wobble = keyframes`
 `;
 
 const Logo = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   &:hover {
     animation: ${wobble} 1s;
