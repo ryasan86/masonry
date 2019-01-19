@@ -5,15 +5,6 @@ import { GITHUB_REPO_URL } from './../constants';
 // components
 import { Logo } from './common';
 
-const StyledAppBar = styled.div`
-  width: 100%;
-  border: ${({ theme }) => theme.lightBorder};
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
 class AppBar extends Component {
   render = () => {
     return (
@@ -26,5 +17,14 @@ class AppBar extends Component {
     );
   };
 }
+
+const StyledAppBar = styled.div`
+  width: 100%;
+  border: ${({ theme }) => theme.lightBorder};
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
 
 export default AppBar;
