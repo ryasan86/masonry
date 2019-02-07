@@ -12,9 +12,8 @@ class Card extends Component {
   };
 
   resizeGridCard = () => {
-    const content = this.refs[`content${this.props.post.id}`];
-    imagesLoaded(content, () => {
-      const contentHeight = content.getBoundingClientRect().height;
+    imagesLoaded(this.content, () => {
+      const contentHeight = this.content.getBoundingClientRect().height;
       const rowSpan = Math.ceil((contentHeight + ROW_GAP) / (ROW_HEIGHT + ROW_GAP));
       this.setState({ span: rowSpan });
     });
@@ -25,7 +24,7 @@ class Card extends Component {
 
     return (
       <StyledCard span={this.state.span}>
-        <div ref={`content${id}`}>
+        <div ref={el => this.content = el}>
           <StyledImg src={imgUrl} alt={id} />
         </div>
       </StyledCard>
